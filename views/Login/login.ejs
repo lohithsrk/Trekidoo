@@ -1,0 +1,55 @@
+<%- include("../partials/head") %>
+    <title>Log In</title>
+    <link rel="shortcut icon" href="/Images/Trekidoo_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../Login/login.css">
+    </head>
+
+    <body>
+        <%- include("../partials/header") %>
+            <section>
+                <div class="color"></div>
+                <div class="color"></div>
+                <div class="color"></div>
+                <div class="box">
+                    <div class="square" style="--i:0;"></div>
+                    <div class="square" style="--i:1;"></div>
+                    <div class="square" style="--i:2;"></div>
+                    <div class="square" style="--i:3;"></div>
+                    <div class="square" style="--i:4;"></div>
+                    <div class="container">
+                        <div class="form">
+                            <h2>Sign in</h2>
+                            <form action="/login" method="POST">
+                                <div class="inputbox">
+                                    <input type="text" name="username" placeholder="Username" required>
+                                </div>
+                                <div class="inputbox">
+                                    <input class="inputPassword" type="password" name="password" placeholder="Password" minlength="8"
+                                        required>
+                                    <div class="eyesContainer">
+                                        <img draggable="false" class="eyes" id="eye" src="/Images/eye-solid.svg"
+                                            alt="" />
+                                        <img draggable="false" class="eyes" id="slashedEye"
+                                            src="/Images/eye-slash-solid.svg" alt="" />
+                                    </div>
+                                </div>
+                                <p id="wrongPassword">
+                                    <%= wrongPassword %>
+                                </p>
+                                <div class="icon">
+                                    <button type="submit" class="button">Sign in</button>
+                                    <a class="googlebtn" href="/auth/google" role="button"><img class="google" src="/Images/google_logo.png" alt="SignIn with Google" /></a>
+                                </div>
+                            </form>
+                            <div class="forget-container">
+                                <!-- <a href="/forget" class="forget">Forget password ?</a> -->
+                                <a href="/register" class="forget">Don't have an account ?</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <script src="../Login/app.js"></script>
+    </body>
+
+    </html>
